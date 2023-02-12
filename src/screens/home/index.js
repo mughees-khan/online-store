@@ -1,8 +1,5 @@
 import "./home.css"
 import "../admin/admin.css"
-import { useEffect, useState } from "react";
-import { getRealTimeItems } from "../../config/firebas";
-
 import adminPic from "../../images/admin.jpeg"
 import logo from "../../images/form.png"
 import homeLogo from "../../images/home.png"
@@ -12,40 +9,26 @@ import { useNavigate } from "react-router-dom"
 
 
 function Home() {
-    const [adds, setAds] = useState([]);
-    function getItems() {
-        getRealTimeItems((ads) => {
-            setAds(ads);
-        });
-    }
-    useEffect(() => {
-        getItems();
-    }, []);
     const navigate = useNavigate()
+
     return (
         <div>
-            <h1 className="product">All products</h1>
-            <div className="all-usedcar-ads">
-                {adds.map((add) =>
-                (
-
-                    <div className="card">
-                        <img className="card-img" src={add.imageUrl} />
-                        <div className="card-text">
-                            <h3 className="card-carinfo">{add.itemName}</h3>
-                            <h4 className="card-price">{add.unitName}kg</h4>
-
-                        </div>
-                        <div>
-                            <h2>{add.unitprice}pkr</h2>
-                        </div>
-                    </div>
-
-                )
-                )}
-
-
+            <h1 className="head">Settings</h1>
+            <div className="pics"><img className="profile profile-one" src={adminPic} alt="" /></div>
+            <div className="pics">
+                <input placeholder="Update name" type="text" />
+                <button className="ad-btn">Add</button>
             </div>
+            <div className="picd">
+                <h1 >all categories</h1>
+                <h2 className="cat">fruits</h2>
+                <h2 className="cat">Meals</h2>
+                <h2 className="cat">vegetables</h2>
+            </div>
+            <div className="pics">
+                <button onClick={() => navigate("/signin")} className="log-btn">Logout</button>
+            </div>
+
             <div className="foot">
                 <div onClick={() => navigate("/home")} className="foot-sty">
                     <img onClick={() => navigate("/home")} className="foot-logos" src={homeLogo} alt="" />Home

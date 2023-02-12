@@ -59,10 +59,10 @@ function User() {
 
 
             <div className="foot">
-                <div onClick={() => navigate("/home")} className="foot-sty">
-                    <img onClick={() => navigate("/home")} className="foot-logos" src={homeLogo} alt="" />Home
+                <div onClick={() => navigate("/user")} className="foot-sty">
+                    <img className="foot-logos" src={homeLogo} alt="" />Home
                 </div>
-                <div onClick={() => navigate("/form")} className="foot-sty">
+                <div onClick={() => navigate("/card")} className="foot-sty">
                     <img className="foot-logos" src={cartLogo} alt="" />card</div>
                 <div onClick={() => navigate("/setting")} className="foot-sty">
                     <img className="foot-logos" src={accountLogo} alt="" />Account

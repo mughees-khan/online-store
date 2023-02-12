@@ -66,3 +66,44 @@
 
     margin: 0% auto;
 }
+
+.head {
+    text-align: center;
+}
+
+.pics {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ad-btn {
+    width: 50px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: greenyellow;
+    border: 1px solid greenyellow;
+}
+
+.cat {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 250px;
+    height: 30px;
+    padding: 20px;
+    color: rgb(11, 255, 11);
+}
+
+.picd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-btn {
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 1px solid greenyellow;
+    border-radius: 8px;
+}
