@@ -1,0 +1,21 @@
+.main-img {
+    width: 500px;
+    height: 300px;
+
+}
+
+.super-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-mains {
+    display: flex;
+    justify-content: center;
+}
+
+.add-logo {
+    width: 40px;
+    height: 40px;
+}
